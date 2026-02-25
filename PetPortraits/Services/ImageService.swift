@@ -22,7 +22,8 @@ class ImageService: ImageServiceProtocol {
                 guard newStatus == .authorized else {
                     throw PermissionError.photoLibraryAccessDenied
                 }
-                return try await performSave(image)
+                try await performSave(image)
+                return
             } else {
                 throw PermissionError.photoLibraryAccessDenied
             }

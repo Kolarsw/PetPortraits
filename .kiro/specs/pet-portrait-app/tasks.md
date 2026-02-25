@@ -61,14 +61,14 @@ The implementation follows an incremental approach: starting with project setup 
     - Test edge cases (denied, restricted states)
     - _Requirements: 11.1, 12.1_
 
-- [ ] 4. Implement ImageService
-  - [ ] 4.1 Create ImageService protocol and implementation
+- [x] 4. Implement ImageService
+  - [x] 4.1 Create ImageService protocol and implementation
     - Implement saveToPhotoLibrary(_ image: UIImage) async throws method
     - Use PHPhotoLibrary.shared().performChanges for saving
     - Handle photo library write permission errors
     - _Requirements: 9.2_
   
-  - [ ]* 4.2 Write unit tests for ImageService
+  - [x] 4.2 Write unit tests for ImageService
     - Test successful save operation with mocked PHPhotoLibrary
     - Test permission denied error handling
     - Test save failure scenarios
