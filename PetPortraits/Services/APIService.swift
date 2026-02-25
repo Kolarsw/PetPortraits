@@ -31,7 +31,7 @@ class APIService: APIServiceProtocol {
             throw APIError.imageConversionError
         }
         
-        let endpoint = baseURL.appendingPathComponent("/v1/generate")
+        let endpoint = baseURL.appendingPathComponent("v1/generate")
         var request = URLRequest(url: endpoint)
         request.httpMethod = "POST"
         request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")

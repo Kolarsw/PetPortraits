@@ -74,8 +74,8 @@ The implementation follows an incremental approach: starting with project setup 
     - Test save failure scenarios
     - _Requirements: 9.2_
 
-- [ ] 5. Implement APIService
-  - [ ] 5.1 Create APIService protocol and implementation
+- [x] 5. Implement APIService
+  - [x] 5.1 Create APIService protocol and implementation
     - Define baseURL and apiKey properties
     - Implement generatePortrait(image: UIImage, stylePrompt: String) async throws method
     - Create multipart form data request with image and style prompt
@@ -83,7 +83,7 @@ The implementation follows an incremental approach: starting with project setup 
     - Handle network errors, invalid responses, and API errors
     - _Requirements: 2.1, 2.2, 2.3, 6.1_
   
-  - [ ]* 5.2 Write unit tests for APIService
+  - [x] 5.2 Write unit tests for APIService
     - Test successful API request and response parsing
     - Test network error handling
     - Test invalid response handling
