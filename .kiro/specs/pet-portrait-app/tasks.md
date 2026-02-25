@@ -8,7 +8,7 @@ The implementation follows an incremental approach: starting with project setup 
 
 ## Tasks
 
-- [-] 1. Set up project structure and configuration
+- [x] 1. Set up project structure and configuration
   - [x] 1.1 Create Xcode project with SwiftUI lifecycle
     - Create new iOS App project in Xcode
     - Configure Info.plist with camera and photo library usage descriptions
@@ -17,7 +17,7 @@ The implementation follows an incremental approach: starting with project setup 
     - Configure minimum iOS deployment target (iOS 15.0)
     - _Requirements: 1.1, 11.2, 12.2_
   
-  - [-] 1.2 Initialize Git repository and push to GitHub
+  - [x] 1.2 Initialize Git repository and push to GitHub
     - Run `git init` in PetPortraits directory
     - Create .gitignore file for Xcode projects (exclude build artifacts, .DS_Store, etc.)
     - Run `git add .` to stage all files
@@ -26,28 +26,28 @@ The implementation follows an incremental approach: starting with project setup 
     - Run `git remote add origin <your-github-repo-url>`
     - Run `git push -u origin main`
 
-- [ ] 2. Implement data models and error types
-  - [ ] 2.1 Create Portrait model with Identifiable and Codable conformance
+- [x] 2. Implement data models and error types
+  - [x] 2.1 Create Portrait model with Identifiable and Codable conformance
     - Define Portrait struct with id, originalImageData, generatedImageData, stylePrompt, and createdAt properties
     - _Requirements: 2.1, 2.2, 6.1_
   
-  - [ ] 2.2 Create APIError enum with LocalizedError conformance
+  - [x] 2.2 Create APIError enum with LocalizedError conformance
     - Define error cases: networkError, invalidResponse, apiError, imageConversionError
     - Implement user-friendly error descriptions for each case
     - _Requirements: 13.1, 13.3_
   
-  - [ ] 2.3 Create PermissionError enum with LocalizedError conformance
+  - [x] 2.3 Create PermissionError enum with LocalizedError conformance
     - Define error cases: cameraAccessDenied, photoLibraryAccessDenied
     - Implement user-friendly error descriptions with Settings guidance
     - _Requirements: 11.1, 12.1_
   
-  - [ ] 2.4 Create APIRequest and APIResponse structs
+  - [x] 2.4 Create APIRequest and APIResponse structs
     - Define APIRequest with image, stylePrompt, and apiKey properties
     - Define APIResponse with imageData property
     - _Requirements: 2.1, 2.2, 2.3_
 
-- [ ] 3. Implement PermissionService
-  - [ ] 3.1 Create PermissionService protocol and implementation
+- [x] 3. Implement PermissionService
+  - [x] 3.1 Create PermissionService protocol and implementation
     - Define PermissionStatus enum (notDetermined, authorized, denied)
     - Implement checkCameraPermission() method using AVCaptureDevice
     - Implement requestCameraPermission() async method
@@ -55,7 +55,7 @@ The implementation follows an incremental approach: starting with project setup 
     - Implement requestPhotoLibraryPermission() async method
     - _Requirements: 11.1, 11.2, 12.1, 12.2_
   
-  - [ ]* 3.2 Write unit tests for PermissionService
+  - [x] 3.2 Write unit tests for PermissionService
     - Test permission status checks for all states
     - Test permission request flows
     - Test edge cases (denied, restricted states)

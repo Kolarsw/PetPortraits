@@ -56,8 +56,8 @@ struct HomeView: View {
             .sheet(isPresented: $showPhotoPicker) {
                 PhotoPickerViewController(image: $viewModel.selectedImage)
             }
-            .onChange(of: viewModel.selectedImage) { image in
-                if image != nil {
+            .onChange(of: viewModel.selectedImage) { oldValue, newValue in
+                if newValue != nil {
                     // Navigate to capture view
                 }
             }

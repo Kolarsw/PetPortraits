@@ -22,11 +22,16 @@ class ImageService: ImageServiceProtocol {
                 guard newStatus == .authorized else {
                     throw PermissionError.photoLibraryAccessDenied
                 }
+                return try await performSave(image)
             } else {
                 throw PermissionError.photoLibraryAccessDenied
             }
         }
         
+        try await performSave(image)
+    }
+    
+    private func performSave(_ image: UIImage) async throws {
         try await PHPhotoLibrary.shared().performChanges {
             PHAssetChangeRequest.creationRequestForAsset(from: image)
         }
