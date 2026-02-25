@@ -16,6 +16,12 @@ The implementation follows an incremental approach: starting with project setup 
     - Set up project folder structure (Views, ViewModels, Services, Models, UIKitBridges)
     - Configure minimum iOS deployment target (iOS 15.0)
     - _Requirements: 1.1, 11.2, 12.2_
+    
+    ⚠️ **USER ACTION REQUIRED**: You must open Xcode to:
+    1. Create the new iOS App project (File → New → Project)
+    2. Configure project settings and bundle identifier
+    3. Add SwiftCheck via Swift Package Manager (File → Add Package Dependencies)
+       - Package URL: https://github.com/typelift/SwiftCheck
   
   - [x] 1.2 Initialize Git repository and push to GitHub
     - Run `git init` in PetPortraits directory
@@ -25,6 +31,12 @@ The implementation follows an incremental approach: starting with project setup 
     - Create GitHub repository (if not already created)
     - Run `git remote add origin <your-github-repo-url>`
     - Run `git push -u origin main`
+    
+    ⚠️ **USER ACTION REQUIRED**: Before pushing to GitHub, you must:
+    1. Log into GitHub (github.com) in your browser
+    2. Create a new repository for this project
+    3. Copy the repository URL to use with `git remote add origin`
+    4. Ensure you have GitHub authentication configured (SSH key or personal access token)
 
 - [x] 2. Implement data models and error types
   - [x] 2.1 Create Portrait model with Identifiable and Codable conformance
@@ -97,6 +109,11 @@ The implementation follows an incremental approach: starting with project setup 
     - Run all unit tests for PermissionService, ImageService, and APIService
     - Verify no compiler warnings or errors
     - Ask the user if questions arise
+    
+    ⚠️ **USER ACTION REQUIRED**: You must run tests in Xcode:
+    1. Open the project in Xcode
+    2. Press ⌘+U to run all tests
+    3. Verify all tests pass in the Test Navigator (⌘+6)
   
   - [ ] 6.2 Commit and push service layer to GitHub
     - Run `git add .` to stage all service layer files
@@ -259,6 +276,11 @@ The implementation follows an incremental approach: starting with project setup 
     - Verify app runs successfully on simulator
     - Test complete user flow manually
     - Ask the user if questions arise
+    
+    ⚠️ **USER ACTION REQUIRED**: You must test in Xcode:
+    1. Run all tests with ⌘+U
+    2. Run the app on simulator (⌘+R) and manually test the UI flow
+    3. Test on a physical device if available (requires Apple Developer account)
   
   - [ ] 12.2 Commit and push UI layer to GitHub
     - Run `git add .` to stage all UI layer files
@@ -420,6 +442,14 @@ The implementation follows an incremental approach: starting with project setup 
     - Configure API key storage (use environment variable or config file)
     - Set app display name and bundle identifier
     - _Requirements: 11.2, 12.2_
+    
+    ⚠️ **USER ACTION REQUIRED**: Before this task can be completed, you must:
+    1. Choose an AI image generation API service (e.g., OpenAI DALL-E, Stability AI, Replicate)
+    2. Create an account and obtain your API key from the chosen service
+    3. Update the `baseURL` in `APIService.swift` to match your chosen API's endpoint
+    4. Provide your API key - Kiro will help you configure secure storage
+    
+    _Note: The current implementation uses a placeholder "Nano Banana Pro" API. The actual API endpoint and request format may need adjustment based on your chosen service._
 
 - [ ] 16. Final checkpoint - Complete implementation
   - [ ] 16.1 Run comprehensive test suite
@@ -429,6 +459,12 @@ The implementation follows an incremental approach: starting with project setup 
     - Verify app runs successfully on simulator
     - Test all user workflows end-to-end
     - Ask the user if questions arise
+    
+    ⚠️ **USER ACTION REQUIRED**: Final verification in Xcode:
+    1. Run full test suite with ⌘+U
+    2. Run app on simulator and physical device
+    3. Test complete user flow: photo capture → style input → generate → save/share
+    4. Verify API integration works with your configured API key
   
   - [ ] 16.2 Final commit and push to GitHub
     - Run `git add .` to stage all remaining files
@@ -436,6 +472,12 @@ The implementation follows an incremental approach: starting with project setup 
     - Run `git push origin main`
     - Create GitHub release tag: `git tag -a v1.0.0 -m "Initial release"`
     - Run `git push origin v1.0.0`
+    
+    ⚠️ **USER ACTION REQUIRED (Optional)**: For App Store distribution:
+    1. Enroll in Apple Developer Program ($99/year) at developer.apple.com
+    2. Create App Store Connect record for your app
+    3. Configure signing certificates and provisioning profiles in Xcode
+    4. Archive and upload build via Xcode (Product → Archive)
 
 ## Notes
 
