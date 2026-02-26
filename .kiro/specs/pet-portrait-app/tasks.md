@@ -104,8 +104,8 @@ The implementation follows an incremental approach: starting with project setup 
     - Use URLProtocol mocking for network requests
     - _Requirements: 2.1, 2.2, 2.3, 13.1, 13.3_
 
-- [ ] 6. Checkpoint - Service layer complete
-  - [ ] 6.1 Ensure all service tests pass
+- [-] 6. Checkpoint - Service layer complete
+  - [x] 6.1 Ensure all service tests pass
     - Run all unit tests for PermissionService, ImageService, and APIService
     - Verify no compiler warnings or errors
     - Ask the user if questions arise
@@ -115,7 +115,7 @@ The implementation follows an incremental approach: starting with project setup 
     2. Press ⌘+U to run all tests
     3. Verify all tests pass in the Test Navigator (⌘+6)
   
-  - [ ] 6.2 Commit and push service layer to GitHub
+  - [-] 6.2 Commit and push service layer to GitHub
     - Run `git add .` to stage all service layer files
     - Run `git commit -m "Implement service layer: PermissionService, ImageService, APIService with tests"`
     - Run `git push origin main`

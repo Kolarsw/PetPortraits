@@ -85,6 +85,6 @@ class APIService: APIServiceProtocol {
     }
 }
 
-struct ErrorResponse: Codable {
+struct ErrorResponse: Codable, Sendable {
     let message: String
 }
