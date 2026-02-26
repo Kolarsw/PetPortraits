@@ -120,14 +120,14 @@ The implementation follows an incremental approach: starting with project setup 
     - Run `git commit -m "Implement service layer: PermissionService, ImageService, APIService with tests"`
     - Run `git push origin main`
 
-- [ ] 7. Implement PortraitViewModel
-  - [ ] 7.1 Create PortraitViewModel class with ObservableObject conformance
+- [x] 7. Implement PortraitViewModel
+  - [x] 7.1 Create PortraitViewModel class with ObservableObject conformance
     - Define @Published properties: selectedImage, stylePrompt, generatedPortrait, isLoading, errorMessage
     - Inject APIService, ImageService, and PermissionService dependencies
     - Initialize with empty/default state
     - _Requirements: 4.2, 5.2, 6.2, 7.1, 7.2, 13.2, 13.4_
   
-  - [ ] 7.2 Implement generatePortrait() async method
+  - [x] 7.2 Implement generatePortrait() async method
     - Set isLoading to true and disable generate button
     - Call APIService.generatePortrait with selectedImage and stylePrompt
     - Update generatedPortrait with API response
@@ -135,22 +135,22 @@ The implementation follows an incremental approach: starting with project setup 
     - Set isLoading to false when complete
     - _Requirements: 6.1, 6.2, 7.1, 7.2, 13.1, 13.2, 13.3, 13.4, 13.5_
   
-  - [ ] 7.3 Implement refreshPortrait() async method
+  - [x] 7.3 Implement refreshPortrait() async method
     - Reuse the same selectedImage and stylePrompt (no modification)
     - Call generatePortrait() logic to fetch new variation
     - Update generatedPortrait with new result
     - _Requirements: 8.1, 8.2_
   
-  - [ ] 7.4 Implement savePortrait() method
+  - [x] 7.4 Implement savePortrait() method
     - Call ImageService.saveToPhotoLibrary with generatedPortrait
     - Handle errors and display appropriate error messages
     - _Requirements: 9.1, 9.2_
   
-  - [ ] 7.5 Implement sharePortrait() method
+  - [x] 7.5 Implement sharePortrait() method
     - Return array containing generatedPortrait for share sheet
     - _Requirements: 10.1, 10.2_
   
-  - [ ]* 7.6 Write unit tests for PortraitViewModel
+  - [x] 7.6 Write unit tests for PortraitViewModel
     - Test initial state (empty image, empty prompt, not loading)
     - Test generatePortrait success flow with mocked APIService
     - Test generatePortrait error handling and state preservation
