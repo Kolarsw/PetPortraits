@@ -175,7 +175,7 @@ The implementation follows an incremental approach: starting with project setup 
     - Dismiss presentation on image selection or cancel
     - _Requirements: 5.1, 5.2_
   
-  - [ ]* 8.3 Write unit tests for UIKit bridges
+  - [ ] 8.3 Write unit tests for UIKit bridges
     - Test CameraViewController creates correct UIImagePickerController configuration
     - Test PhotoPickerViewController creates correct UIImagePickerController configuration
     - Test Coordinator delegate methods update bindings correctly
@@ -203,7 +203,7 @@ The implementation follows an incremental approach: starting with project setup 
     3. Check the box next to `PetPortraitsUITests`
     4. Click "Close"
   
-  - [ ]* 9.3 Write UI tests for HomeView
+  - [ ] 9.3 Write UI tests for HomeView
     - Test both buttons are present with correct labels
     - Test tapping "Take Photo" presents camera interface
     - Test tapping "Choose from Gallery" presents photo picker
@@ -232,7 +232,7 @@ The implementation follows an incremental approach: starting with project setup 
     - Pass ViewModel to ResultsView
     - _Requirements: 6.2_
   
-  - [ ]* 10.4 Write UI tests for CaptureView
+  - [ ] 10.4 Write UI tests for CaptureView
     - Test image displays correctly
     - Test style input field is present with correct label
     - Test "Generate" button is enabled when not loading
@@ -265,7 +265,7 @@ The implementation follows an incremental approach: starting with project setup 
     - Preserve state for retry on refresh errors
     - _Requirements: 13.1, 13.2, 13.3, 13.4, 13.5_
   
-  - [ ]* 11.4 Write UI tests for ResultsView
+  - [ ] 11.4 Write UI tests for ResultsView
     - Test generated portrait displays correctly
     - Test all three action buttons are present with correct labels
     - Test "Refresh" button triggers refresh operation
@@ -294,7 +294,7 @@ The implementation follows an incremental approach: starting with project setup 
     - Run `git push origin main`
 
 - [ ] 13. Implement property-based tests for correctness properties
-  - [ ]* 13.1 Set up SwiftCheck configuration and custom generators
+  - [ ] 13.1 Set up SwiftCheck configuration and custom generators
     - Configure CheckerArguments with 100 minimum iterations
     - Create UIImage generator for random test images
     - Create String generator for style prompts with various lengths
@@ -303,49 +303,49 @@ The implementation follows an incremental approach: starting with project setup 
     - Create APIError generator for various error types
     - _Requirements: All requirements (testing infrastructure)_
   
-  - [ ]* 13.2 Write property test for Property 1: API Request Completeness
+  - [ ] 13.2 Write property test for Property 1: API Request Completeness
     - **Property 1: API Request Completeness**
     - **Validates: Requirements 2.2, 6.1**
     - Generate random images and style prompts
     - Verify API requests include both image data and style prompt text
     - Use forAll with image and prompt generators
   
-  - [ ]* 13.3 Write property test for Property 2: API Response Display
+  - [ ] 13.3 Write property test for Property 2: API Response Display
     - **Property 2: API Response Display**
     - **Validates: Requirements 2.3, 6.2**
     - Generate random successful API responses
     - Verify generatedPortrait updates with received image
     - Test across various image formats and sizes
   
-  - [ ]* 13.4 Write property test for Property 3: Image Selection Display
+  - [ ] 13.4 Write property test for Property 3: Image Selection Display
     - **Property 3: Image Selection Display**
     - **Validates: Requirements 4.2, 5.2**
     - Generate random images for selection
     - Verify selectedImage displays in CaptureView
     - Test for both camera and photo picker sources
   
-  - [ ]* 13.5 Write property test for Property 4: Style Input Availability
+  - [ ] 13.5 Write property test for Property 4: Style Input Availability
     - **Property 4: Style Input Availability**
     - **Validates: Requirements 4.3, 5.3**
     - Generate random image selection events
     - Verify style input field appears with correct label
     - Test for both camera and photo picker sources
   
-  - [ ]* 13.6 Write property test for Property 5: Camera Interface Activation
+  - [ ] 13.6 Write property test for Property 5: Camera Interface Activation
     - **Property 5: Camera Interface Activation**
     - **Validates: Requirements 4.1**
     - Generate random initial app states
     - Verify camera interface presents when "Take Photo" tapped
     - Test across various ViewModel states
   
-  - [ ]* 13.7 Write property test for Property 6: Photo Picker Activation
+  - [ ] 13.7 Write property test for Property 6: Photo Picker Activation
     - **Property 6: Photo Picker Activation**
     - **Validates: Requirements 5.1**
     - Generate random initial app states
     - Verify photo picker presents when "Choose from Gallery" tapped
     - Test across various ViewModel states
   
-  - [ ]* 13.8 Write property test for Property 7: Loading State Behavior
+  - [ ] 13.8 Write property test for Property 7: Loading State Behavior
     - **Property 7: Loading State Behavior**
     - **Validates: Requirements 7.1, 7.2**
     - Generate random API request scenarios
@@ -353,42 +353,42 @@ The implementation follows an incremental approach: starting with project setup 
     - Verify loading animation is displayed during loading
     - Test for both generate and refresh operations
   
-  - [ ]* 13.9 Write property test for Property 8: Refresh Input Preservation
+  - [ ] 13.9 Write property test for Property 8: Refresh Input Preservation
     - **Property 8: Refresh Input Preservation**
     - **Validates: Requirements 8.1**
     - Generate random images and style prompts
     - Trigger refresh operation
     - Verify identical image and style prompt sent to API (no modifications)
   
-  - [ ]* 13.10 Write property test for Property 9: Refresh Portrait Update
+  - [ ] 13.10 Write property test for Property 9: Refresh Portrait Update
     - **Property 9: Refresh Portrait Update**
     - **Validates: Requirements 8.2**
     - Generate random refresh API responses
     - Verify displayed portrait updates to new image
     - Test that old portrait is replaced, not appended
   
-  - [ ]* 13.11 Write property test for Property 10: Portrait Persistence
+  - [ ] 13.11 Write property test for Property 10: Portrait Persistence
     - **Property 10: Portrait Persistence**
     - **Validates: Requirements 9.2**
     - Generate random generated portraits
     - Trigger save operation
     - Verify ImageService.saveToPhotoLibrary called with correct image
   
-  - [ ]* 13.12 Write property test for Property 11: Share Sheet Presentation
+  - [ ] 13.12 Write property test for Property 11: Share Sheet Presentation
     - **Property 11: Share Sheet Presentation**
     - **Validates: Requirements 10.1, 10.2**
     - Generate random generated portraits
     - Trigger share operation
     - Verify share sheet presents with generated portrait image
   
-  - [ ]* 13.13 Write property test for Property 12: Error Message Display
+  - [ ] 13.13 Write property test for Property 12: Error Message Display
     - **Property 12: Error Message Display**
     - **Validates: Requirements 13.1, 13.3**
     - Generate random error conditions (API errors, network failures)
     - Verify localized error message displays for each error type
     - Test all error cases from APIError enum
   
-  - [ ]* 13.14 Write property test for Property 13: Error State Preservation
+  - [ ] 13.14 Write property test for Property 13: Error State Preservation
     - **Property 13: Error State Preservation (Invariant)**
     - **Validates: Requirements 13.2, 13.4**
     - Generate random errors and user inputs (image, style prompt)
@@ -396,7 +396,7 @@ The implementation follows an incremental approach: starting with project setup 
     - Verify selectedImage and stylePrompt remain unchanged
     - Test across all error types
   
-  - [ ]* 13.15 Write property test for Property 14: Error Recovery Capability
+  - [ ] 13.15 Write property test for Property 14: Error Recovery Capability
     - **Property 14: Error Recovery Capability**
     - **Validates: Requirements 13.5**
     - Generate random error states
@@ -404,31 +404,31 @@ The implementation follows an incremental approach: starting with project setup 
     - Verify user can retry with preserved inputs
 
 - [ ] 14. Implement integration tests for end-to-end workflows
-  - [ ]* 14.1 Write integration test for happy path: photo selection to save
+  - [ ] 14.1 Write integration test for happy path: photo selection to save
     - Test complete flow: launch → select photo → enter prompt → generate → view results → save
     - Verify all state transitions and UI updates
     - Use mocked APIService for predictable results
     - _Requirements: 5.1, 5.2, 5.3, 6.1, 6.2, 6.3, 9.1, 9.2_
   
-  - [ ]* 14.2 Write integration test for happy path: camera capture to share
+  - [ ] 14.2 Write integration test for happy path: camera capture to share
     - Test complete flow: launch → take photo → enter prompt → generate → view results → share
     - Verify all state transitions and UI updates
     - Use mocked camera and APIService
     - _Requirements: 4.1, 4.2, 4.3, 6.1, 6.2, 6.3, 10.1, 10.2, 10.3_
   
-  - [ ]* 14.3 Write integration test for error recovery path
+  - [ ] 14.3 Write integration test for error recovery path
     - Test flow: select photo → enter prompt → generate (network error) → retry → success
     - Verify error message display and state preservation
     - Verify successful retry with preserved inputs
     - _Requirements: 13.1, 13.2, 13.3, 13.4, 13.5_
   
-  - [ ]* 14.4 Write integration test for permission handling
+  - [ ] 14.4 Write integration test for permission handling
     - Test flow: launch → take photo (no permission) → grant permission → take photo → success
     - Verify permission request and handling
     - Test both camera and photo library permissions
     - _Requirements: 11.1, 11.2, 12.1, 12.2_
   
-  - [ ]* 14.5 Write integration test for refresh workflow
+  - [ ] 14.5 Write integration test for refresh workflow
     - Test flow: generate portrait → view results → refresh → view new variation
     - Verify same inputs used for refresh
     - Verify portrait updates correctly
