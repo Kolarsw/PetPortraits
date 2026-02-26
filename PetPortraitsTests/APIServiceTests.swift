@@ -364,7 +364,7 @@ class APIServiceTests: XCTestCase {
     func testGeneratePortrait_When400Error_ThrowsAPIError() async {
         // Given
         let testImage = createTestImage()
-        let errorResponse = ErrorResponse(message: "Invalid request parameters")
+        let errorResponse = TestErrorResponse(message: "Invalid request parameters")
         let errorData = try! JSONEncoder().encode(errorResponse)
         
         MockURLProtocol.requestHandler = { request in
@@ -396,7 +396,7 @@ class APIServiceTests: XCTestCase {
     func testGeneratePortrait_When401Error_ThrowsAPIError() async {
         // Given
         let testImage = createTestImage()
-        let errorResponse = ErrorResponse(message: "Invalid API key")
+        let errorResponse = TestErrorResponse(message: "Invalid API key")
         let errorData = try! JSONEncoder().encode(errorResponse)
         
         MockURLProtocol.requestHandler = { request in
@@ -428,7 +428,7 @@ class APIServiceTests: XCTestCase {
     func testGeneratePortrait_When429RateLimited_ThrowsAPIError() async {
         // Given
         let testImage = createTestImage()
-        let errorResponse = ErrorResponse(message: "Rate limit exceeded")
+        let errorResponse = TestErrorResponse(message: "Rate limit exceeded")
         let errorData = try! JSONEncoder().encode(errorResponse)
         
         MockURLProtocol.requestHandler = { request in
@@ -460,7 +460,7 @@ class APIServiceTests: XCTestCase {
     func testGeneratePortrait_When500Error_ThrowsAPIError() async {
         // Given
         let testImage = createTestImage()
-        let errorResponse = ErrorResponse(message: "Internal server error")
+        let errorResponse = TestErrorResponse(message: "Internal server error")
         let errorData = try! JSONEncoder().encode(errorResponse)
         
         MockURLProtocol.requestHandler = { request in
@@ -492,7 +492,7 @@ class APIServiceTests: XCTestCase {
     func testGeneratePortrait_When503ServiceUnavailable_ThrowsAPIError() async {
         // Given
         let testImage = createTestImage()
-        let errorResponse = ErrorResponse(message: "Service temporarily unavailable")
+        let errorResponse = TestErrorResponse(message: "Service temporarily unavailable")
         let errorData = try! JSONEncoder().encode(errorResponse)
         
         MockURLProtocol.requestHandler = { request in
@@ -556,7 +556,7 @@ class APIServiceTests: XCTestCase {
         // Given
         let testImage = createTestImage()
         let customMessage = "Custom error message from API"
-        let errorResponse = ErrorResponse(message: customMessage)
+        let errorResponse = TestErrorResponse(message: customMessage)
         let errorData = try! JSONEncoder().encode(errorResponse)
         
         MockURLProtocol.requestHandler = { request in
@@ -802,6 +802,14 @@ class APIServiceTests: XCTestCase {
     }
 }
 
+
+// MARK: - Test Helper Types
+
+/// A Sendable error response struct for use in async test contexts
+/// This avoids Swift 6 concurrency warnings with the main module's ErrorResponse
+private struct TestErrorResponse: Codable, Sendable {
+    let message: String
+}
 
 // MARK: - MockURLProtocol
 

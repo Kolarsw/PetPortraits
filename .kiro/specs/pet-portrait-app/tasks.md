@@ -104,7 +104,7 @@ The implementation follows an incremental approach: starting with project setup 
     - Use URLProtocol mocking for network requests
     - _Requirements: 2.1, 2.2, 2.3, 13.1, 13.3_
 
-- [-] 6. Checkpoint - Service layer complete
+- [x] 6. Checkpoint - Service layer complete
   - [x] 6.1 Ensure all service tests pass
     - Run all unit tests for PermissionService, ImageService, and APIService
     - Verify no compiler warnings or errors
@@ -115,7 +115,7 @@ The implementation follows an incremental approach: starting with project setup 
     2. Press ⌘+U to run all tests
     3. Verify all tests pass in the Test Navigator (⌘+6)
   
-  - [-] 6.2 Commit and push service layer to GitHub
+  - [x] 6.2 Commit and push service layer to GitHub
     - Run `git add .` to stage all service layer files
     - Run `git commit -m "Implement service layer: PermissionService, ImageService, APIService with tests"`
     - Run `git push origin main`
@@ -196,6 +196,12 @@ The implementation follows an incremental approach: starting with project setup 
     - Bind selectedImage from ViewModel to both pickers
     - Navigate to CaptureView when image is selected
     - _Requirements: 4.1, 5.1_
+  
+  ⚠️ **USER ACTION REQUIRED**: Before writing UI tests, re-enable the UI test target:
+    1. Go to **Product → Scheme → Edit Scheme**
+    2. Select "Test" on the left sidebar
+    3. Check the box next to `PetPortraitsUITests`
+    4. Click "Close"
   
   - [ ]* 9.3 Write UI tests for HomeView
     - Test both buttons are present with correct labels
