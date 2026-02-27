@@ -181,8 +181,8 @@ The implementation follows an incremental approach: starting with project setup 
     - Test Coordinator delegate methods update bindings correctly
     - _Requirements: 4.1, 4.2, 5.1, 5.2_
 
-- [ ] 9. Implement HomeView
-  - [ ] 9.1 Create HomeView with minimalist design
+- [x] 9. Implement HomeView
+  - [x] 9.1 Create HomeView with minimalist design
     - Display app title with ample white space
     - Create "Take Photo" button that sets showCamera to true
     - Create "Choose from Gallery" button that sets showPhotoPicker to true
@@ -190,7 +190,7 @@ The implementation follows an incremental approach: starting with project setup 
     - Apply minimalist styling with white space
     - _Requirements: 1.1, 1.2, 1.3, 3.1, 3.2, 3.3_
   
-  - [ ] 9.2 Add camera and photo picker presentation logic
+  - [x] 9.2 Add camera and photo picker presentation logic
     - Present CameraViewController when showCamera is true
     - Present PhotoPickerViewController when showPhotoPicker is true
     - Bind selectedImage from ViewModel to both pickers
@@ -203,7 +203,7 @@ The implementation follows an incremental approach: starting with project setup 
     3. Check the box next to `PetPortraitsUITests`
     4. Click "Close"
   
-  - [ ] 9.3 Write UI tests for HomeView
+  - [x] 9.3 Write UI tests for HomeView
     - Test both buttons are present with correct labels
     - Test tapping "Take Photo" presents camera interface
     - Test tapping "Choose from Gallery" presents photo picker
