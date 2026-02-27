@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Sync Swift Files to Xcode",
+  "description": "When a new Swift file is created in the PetPortraits project, reminds the agent to use xcodegen or provides instructions to add the file to the Xcode project",
+  "version": "1",
+  "when": {
+    "type": "fileCreated",
+    "patterns": [
+      "PetPortraits/**/*.swift"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A new Swift file was created. Remind the user that they need to manually add this file to the Xcode project by right-clicking the appropriate group in Xcode's Project Navigator, selecting \"Add Files to 'PetPortraits'...\", and selecting the new file. Alternatively, suggest they consider using a tool like xcodegen or Tuist to auto-generate the project file from the directory structure."
+  }
+}

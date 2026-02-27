@@ -210,8 +210,8 @@ The implementation follows an incremental approach: starting with project setup 
     - Test navigation to CaptureView after image selection
     - _Requirements: 3.1, 3.2, 3.3, 4.1, 5.1_
 
-- [ ] 10. Implement CaptureView
-  - [ ] 10.1 Create CaptureView with image display and style input
+- [x] 10. Implement CaptureView
+  - [x] 10.1 Create CaptureView with image display and style input
     - Display selectedImage from ViewModel using Image view
     - Create TextField labeled "How should we style your pet?" bound to stylePrompt
     - Create "Generate" button that calls viewModel.generatePortrait()
@@ -220,19 +220,19 @@ The implementation follows an incremental approach: starting with project setup 
     - Use native SwiftUI components with minimalist design
     - _Requirements: 1.1, 1.2, 1.3, 4.2, 4.3, 5.2, 5.3, 6.1, 7.1, 7.2, 7.3_
   
-  - [ ] 10.2 Add error handling UI
+  - [x] 10.2 Add error handling UI
     - Display alert when errorMessage is not nil
     - Show localized error message in alert
     - Provide "Retry" button in alert that dismisses and keeps inputs preserved
     - Ensure "Generate" button is enabled after error for retry
     - _Requirements: 13.1, 13.2, 13.3, 13.4, 13.5_
   
-  - [ ] 10.3 Add navigation to ResultsView
+  - [x] 10.3 Add navigation to ResultsView
     - Navigate to ResultsView when generatedPortrait is not nil
     - Pass ViewModel to ResultsView
     - _Requirements: 6.2_
   
-  - [ ] 10.4 Write UI tests for CaptureView
+  - [x] 10.4 Write UI tests for CaptureView
     - Test image displays correctly
     - Test style input field is present with correct label
     - Test "Generate" button is enabled when not loading
