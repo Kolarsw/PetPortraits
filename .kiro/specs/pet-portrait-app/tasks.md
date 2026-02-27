@@ -242,8 +242,8 @@ The implementation follows an incremental approach: starting with project setup 
     - Test navigation to ResultsView on success
     - _Requirements: 4.2, 4.3, 5.2, 5.3, 6.1, 7.1, 7.2, 13.1, 13.5_
 
-- [ ] 11. Implement ResultsView
-  - [ ] 11.1 Create ResultsView with portrait display and action buttons
+- [x] 11. Implement ResultsView
+  - [x] 11.1 Create ResultsView with portrait display and action buttons
     - Display generatedPortrait from ViewModel using Image view
     - Create "Refresh" button that calls viewModel.refreshPortrait()
     - Create "Save" button that calls viewModel.savePortrait()
@@ -253,19 +253,19 @@ The implementation follows an incremental approach: starting with project setup 
     - Use native SwiftUI components with minimalist design
     - _Requirements: 1.1, 1.2, 1.3, 6.2, 6.3, 8.1, 9.1_
   
-  - [ ] 11.2 Implement share sheet presentation
+  - [x] 11.2 Implement share sheet presentation
     - Use sheet modifier to present ActivityViewController
     - Populate share sheet with items from viewModel.sharePortrait()
     - Use UIViewControllerRepresentable wrapper for UIActivityViewController
     - _Requirements: 10.1, 10.2, 10.3_
   
-  - [ ] 11.3 Add error handling for save and refresh operations
+  - [x] 11.3 Add error handling for save and refresh operations
     - Display alert when errorMessage is not nil
     - Show localized error message in alert
     - Preserve state for retry on refresh errors
     - _Requirements: 13.1, 13.2, 13.3, 13.4, 13.5_
   
-  - [ ] 11.4 Write UI tests for ResultsView
+  - [x] 11.4 Write UI tests for ResultsView
     - Test generated portrait displays correctly
     - Test all three action buttons are present with correct labels
     - Test "Refresh" button triggers refresh operation
@@ -275,8 +275,8 @@ The implementation follows an incremental approach: starting with project setup 
     - Test error handling for failed operations
     - _Requirements: 6.2, 6.3, 8.1, 8.2, 9.1, 10.1, 13.1, 13.5_
 
-- [ ] 12. Checkpoint - UI layer complete
-  - [ ] 12.1 Ensure all UI tests pass
+- [-] 12. Checkpoint - UI layer complete
+  - [x] 12.1 Ensure all UI tests pass
     - Run all unit tests for PortraitViewModel and UIKit bridges
     - Run all UI tests for HomeView, CaptureView, and ResultsView
     - Verify app runs successfully on simulator
@@ -288,7 +288,7 @@ The implementation follows an incremental approach: starting with project setup 
     2. Run the app on simulator (⌘+R) and manually test the UI flow
     3. Test on a physical device if available (requires Apple Developer account)
   
-  - [ ] 12.2 Commit and push UI layer to GitHub
+  - [-] 12.2 Commit and push UI layer to GitHub
     - Run `git add .` to stage all UI layer files
     - Run `git commit -m "Implement UI layer: PortraitViewModel, all Views, and UIKit bridges with tests"`
     - Run `git push origin main`

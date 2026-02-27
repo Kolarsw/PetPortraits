@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7B582D872F514A8300167D20 /* HomeViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B582D852F514A8300167D20 /* HomeViewUITests.swift */; };
 		7B582D892F514DEC00167D20 /* CaptureViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B582D882F514DEC00167D20 /* CaptureViewUITests.swift */; };
+		7B582D8A2F515A0000167D20 /* ResultsViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B582D8B2F515A0000167D20 /* ResultsViewUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		7B582D812F51447B00167D20 /* PetPortraits.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PetPortraits.xctestplan; sourceTree = "<group>"; };
 		7B582D852F514A8300167D20 /* HomeViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUITests.swift; sourceTree = "<group>"; };
 		7B582D882F514DEC00167D20 /* CaptureViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewUITests.swift; sourceTree = "<group>"; };
+		7B582D8B2F515A0000167D20 /* ResultsViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewUITests.swift; sourceTree = "<group>"; };
 		7BBE44842F4EB560002812F6 /* PetPortraits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetPortraits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBE44912F4EB561002812F6 /* PetPortraitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetPortraitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBE449B2F4EB561002812F6 /* PetPortraitsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetPortraitsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 			children = (
 				7B582D882F514DEC00167D20 /* CaptureViewUITests.swift */,
 				7B582D852F514A8300167D20 /* HomeViewUITests.swift */,
+				7B582D8B2F515A0000167D20 /* ResultsViewUITests.swift */,
 			);
 			path = PetPortraitsUITests;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				7B582D872F514A8300167D20 /* HomeViewUITests.swift in Sources */,
 				7B582D892F514DEC00167D20 /* CaptureViewUITests.swift in Sources */,
+				7B582D8A2F515A0000167D20 /* ResultsViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
