@@ -10,6 +10,7 @@
 		7B582D872F514A8300167D20 /* HomeViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B582D852F514A8300167D20 /* HomeViewUITests.swift */; };
 		7B582D892F514DEC00167D20 /* CaptureViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B582D882F514DEC00167D20 /* CaptureViewUITests.swift */; };
 		7B582D8A2F515A0000167D20 /* ResultsViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B582D8B2F515A0000167D20 /* ResultsViewUITests.swift */; };
+		7BAADD2C2F515FB30046D72D /* SwiftCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 7BAADD2B2F515FB30046D72D /* SwiftCheck */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAADD2C2F515FB30046D72D /* SwiftCheck in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +102,13 @@
 			path = PetPortraitsUITests;
 			sourceTree = "<group>";
 		};
+		7BAADD2A2F515FB30046D72D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7BBE447B2F4EB560002812F6 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +116,7 @@
 				7B582D812F51447B00167D20 /* PetPortraits.xctestplan */,
 				7BBE44862F4EB560002812F6 /* PetPortraits */,
 				7BBE44942F4EB561002812F6 /* PetPortraitsTests */,
+				7BAADD2A2F515FB30046D72D /* Frameworks */,
 				7BBE44852F4EB560002812F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,6 +174,7 @@
 			);
 			name = PetPortraitsTests;
 			packageProductDependencies = (
+				7BAADD2B2F515FB30046D72D /* SwiftCheck */,
 			);
 			productName = PetPortraitsTests;
 			productReference = 7BBE44912F4EB561002812F6 /* PetPortraitsTests.xctest */;
@@ -221,6 +232,9 @@
 			);
 			mainGroup = 7BBE447B2F4EB560002812F6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7BAADD292F515ED30046D72D /* XCRemoteSwiftPackageReference "SwiftCheck" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7BBE44852F4EB560002812F6 /* Products */;
 			projectDirPath = "";
@@ -599,6 +613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7BAADD292F515ED30046D72D /* XCRemoteSwiftPackageReference "SwiftCheck" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/typelift/SwiftCheck.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7BAADD2B2F515FB30046D72D /* SwiftCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BAADD292F515ED30046D72D /* XCRemoteSwiftPackageReference "SwiftCheck" */;
+			productName = SwiftCheck;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7BBE447C2F4EB560002812F6 /* Project object */;
 }

@@ -275,7 +275,7 @@ The implementation follows an incremental approach: starting with project setup 
     - Test error handling for failed operations
     - _Requirements: 6.2, 6.3, 8.1, 8.2, 9.1, 10.1, 13.1, 13.5_
 
-- [-] 12. Checkpoint - UI layer complete
+- [x] 12. Checkpoint - UI layer complete
   - [x] 12.1 Ensure all UI tests pass
     - Run all unit tests for PortraitViewModel and UIKit bridges
     - Run all UI tests for HomeView, CaptureView, and ResultsView
@@ -288,13 +288,13 @@ The implementation follows an incremental approach: starting with project setup 
     2. Run the app on simulator (⌘+R) and manually test the UI flow
     3. Test on a physical device if available (requires Apple Developer account)
   
-  - [-] 12.2 Commit and push UI layer to GitHub
+  - [x] 12.2 Commit and push UI layer to GitHub
     - Run `git add .` to stage all UI layer files
     - Run `git commit -m "Implement UI layer: PortraitViewModel, all Views, and UIKit bridges with tests"`
     - Run `git push origin main`
 
-- [ ] 13. Implement property-based tests for correctness properties
-  - [ ] 13.1 Set up SwiftCheck configuration and custom generators
+- [x] 13. Implement property-based tests for correctness properties
+  - [x] 13.1 Set up SwiftCheck configuration and custom generators
     - Configure CheckerArguments with 100 minimum iterations
     - Create UIImage generator for random test images
     - Create String generator for style prompts with various lengths
@@ -303,49 +303,49 @@ The implementation follows an incremental approach: starting with project setup 
     - Create APIError generator for various error types
     - _Requirements: All requirements (testing infrastructure)_
   
-  - [ ] 13.2 Write property test for Property 1: API Request Completeness
+  - [x] 13.2 Write property test for Property 1: API Request Completeness
     - **Property 1: API Request Completeness**
     - **Validates: Requirements 2.2, 6.1**
     - Generate random images and style prompts
     - Verify API requests include both image data and style prompt text
     - Use forAll with image and prompt generators
   
-  - [ ] 13.3 Write property test for Property 2: API Response Display
+  - [x] 13.3 Write property test for Property 2: API Response Display
     - **Property 2: API Response Display**
     - **Validates: Requirements 2.3, 6.2**
     - Generate random successful API responses
     - Verify generatedPortrait updates with received image
     - Test across various image formats and sizes
   
-  - [ ] 13.4 Write property test for Property 3: Image Selection Display
+  - [x] 13.4 Write property test for Property 3: Image Selection Display
     - **Property 3: Image Selection Display**
     - **Validates: Requirements 4.2, 5.2**
     - Generate random images for selection
     - Verify selectedImage displays in CaptureView
     - Test for both camera and photo picker sources
   
-  - [ ] 13.5 Write property test for Property 4: Style Input Availability
+  - [x] 13.5 Write property test for Property 4: Style Input Availability
     - **Property 4: Style Input Availability**
     - **Validates: Requirements 4.3, 5.3**
     - Generate random image selection events
     - Verify style input field appears with correct label
     - Test for both camera and photo picker sources
   
-  - [ ] 13.6 Write property test for Property 5: Camera Interface Activation
+  - [x] 13.6 Write property test for Property 5: Camera Interface Activation
     - **Property 5: Camera Interface Activation**
     - **Validates: Requirements 4.1**
     - Generate random initial app states
     - Verify camera interface presents when "Take Photo" tapped
     - Test across various ViewModel states
   
-  - [ ] 13.7 Write property test for Property 6: Photo Picker Activation
+  - [x] 13.7 Write property test for Property 6: Photo Picker Activation
     - **Property 6: Photo Picker Activation**
     - **Validates: Requirements 5.1**
     - Generate random initial app states
     - Verify photo picker presents when "Choose from Gallery" tapped
     - Test across various ViewModel states
   
-  - [ ] 13.8 Write property test for Property 7: Loading State Behavior
+  - [x] 13.8 Write property test for Property 7: Loading State Behavior
     - **Property 7: Loading State Behavior**
     - **Validates: Requirements 7.1, 7.2**
     - Generate random API request scenarios
@@ -353,42 +353,42 @@ The implementation follows an incremental approach: starting with project setup 
     - Verify loading animation is displayed during loading
     - Test for both generate and refresh operations
   
-  - [ ] 13.9 Write property test for Property 8: Refresh Input Preservation
+  - [x] 13.9 Write property test for Property 8: Refresh Input Preservation
     - **Property 8: Refresh Input Preservation**
     - **Validates: Requirements 8.1**
     - Generate random images and style prompts
     - Trigger refresh operation
     - Verify identical image and style prompt sent to API (no modifications)
   
-  - [ ] 13.10 Write property test for Property 9: Refresh Portrait Update
+  - [x] 13.10 Write property test for Property 9: Refresh Portrait Update
     - **Property 9: Refresh Portrait Update**
     - **Validates: Requirements 8.2**
     - Generate random refresh API responses
     - Verify displayed portrait updates to new image
     - Test that old portrait is replaced, not appended
   
-  - [ ] 13.11 Write property test for Property 10: Portrait Persistence
+  - [x] 13.11 Write property test for Property 10: Portrait Persistence
     - **Property 10: Portrait Persistence**
     - **Validates: Requirements 9.2**
     - Generate random generated portraits
     - Trigger save operation
     - Verify ImageService.saveToPhotoLibrary called with correct image
   
-  - [ ] 13.12 Write property test for Property 11: Share Sheet Presentation
+  - [x] 13.12 Write property test for Property 11: Share Sheet Presentation
     - **Property 11: Share Sheet Presentation**
     - **Validates: Requirements 10.1, 10.2**
     - Generate random generated portraits
     - Trigger share operation
     - Verify share sheet presents with generated portrait image
   
-  - [ ] 13.13 Write property test for Property 12: Error Message Display
+  - [x] 13.13 Write property test for Property 12: Error Message Display
     - **Property 12: Error Message Display**
     - **Validates: Requirements 13.1, 13.3**
     - Generate random error conditions (API errors, network failures)
     - Verify localized error message displays for each error type
     - Test all error cases from APIError enum
   
-  - [ ] 13.14 Write property test for Property 13: Error State Preservation
+  - [x] 13.14 Write property test for Property 13: Error State Preservation
     - **Property 13: Error State Preservation (Invariant)**
     - **Validates: Requirements 13.2, 13.4**
     - Generate random errors and user inputs (image, style prompt)
@@ -396,7 +396,7 @@ The implementation follows an incremental approach: starting with project setup 
     - Verify selectedImage and stylePrompt remain unchanged
     - Test across all error types
   
-  - [ ] 13.15 Write property test for Property 14: Error Recovery Capability
+  - [x] 13.15 Write property test for Property 14: Error Recovery Capability
     - **Property 14: Error Recovery Capability**
     - **Validates: Requirements 13.5**
     - Generate random error states
