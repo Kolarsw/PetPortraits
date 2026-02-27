@@ -160,22 +160,22 @@ The implementation follows an incremental approach: starting with project setup 
     - Test loading state transitions
     - _Requirements: 6.1, 6.2, 7.1, 7.2, 8.1, 8.2, 9.2, 10.1, 13.2, 13.4, 13.5_
 
-- [ ] 8. Implement UIKit bridge components
-  - [ ] 8.1 Create CameraViewController with UIViewControllerRepresentable
+- [x] 8. Implement UIKit bridge components
+  - [x] 8.1 Create CameraViewController with UIViewControllerRepresentable
     - Implement makeUIViewController to create UIImagePickerController with camera source
     - Implement Coordinator to handle UIImagePickerControllerDelegate callbacks
     - Bind captured image to @Binding var image
     - Dismiss presentation on image capture or cancel
     - _Requirements: 4.1, 4.2_
   
-  - [ ] 8.2 Create PhotoPickerViewController with UIViewControllerRepresentable
+  - [x] 8.2 Create PhotoPickerViewController with UIViewControllerRepresentable
     - Implement makeUIViewController to create UIImagePickerController with photo library source
     - Implement Coordinator to handle UIImagePickerControllerDelegate callbacks
     - Bind selected image to @Binding var image
     - Dismiss presentation on image selection or cancel
     - _Requirements: 5.1, 5.2_
   
-  - [ ] 8.3 Write unit tests for UIKit bridges
+  - [x] 8.3 Write unit tests for UIKit bridges
     - Test CameraViewController creates correct UIImagePickerController configuration
     - Test PhotoPickerViewController creates correct UIImagePickerController configuration
     - Test Coordinator delegate methods update bindings correctly

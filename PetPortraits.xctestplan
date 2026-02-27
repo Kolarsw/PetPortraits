@@ -1,0 +1,39 @@
+{
+  "configurations" : [
+    {
+      "id" : "491E7712-5A23-4465-A0A2-922E50B46D70",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:PetPortraits.xcodeproj",
+      "identifier" : "7BBE44832F4EB560002812F6",
+      "name" : "PetPortraits"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:PetPortraits.xcodeproj",
+        "identifier" : "7BBE44902F4EB561002812F6",
+        "name" : "PetPortraitsTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:PetPortraits.xcodeproj",
+        "identifier" : "7BBE449A2F4EB561002812F6",
+        "name" : "PetPortraitsUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
