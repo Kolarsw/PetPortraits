@@ -403,32 +403,32 @@ The implementation follows an incremental approach: starting with project setup 
     - Verify "Generate" button is enabled after error
     - Verify user can retry with preserved inputs
 
-- [ ] 14. Implement integration tests for end-to-end workflows
-  - [ ] 14.1 Write integration test for happy path: photo selection to save
+- [x] 14. Implement integration tests for end-to-end workflows
+  - [x] 14.1 Write integration test for happy path: photo selection to save
     - Test complete flow: launch → select photo → enter prompt → generate → view results → save
     - Verify all state transitions and UI updates
     - Use mocked APIService for predictable results
     - _Requirements: 5.1, 5.2, 5.3, 6.1, 6.2, 6.3, 9.1, 9.2_
   
-  - [ ] 14.2 Write integration test for happy path: camera capture to share
+  - [x] 14.2 Write integration test for happy path: camera capture to share
     - Test complete flow: launch → take photo → enter prompt → generate → view results → share
     - Verify all state transitions and UI updates
     - Use mocked camera and APIService
     - _Requirements: 4.1, 4.2, 4.3, 6.1, 6.2, 6.3, 10.1, 10.2, 10.3_
   
-  - [ ] 14.3 Write integration test for error recovery path
+  - [x] 14.3 Write integration test for error recovery path
     - Test flow: select photo → enter prompt → generate (network error) → retry → success
     - Verify error message display and state preservation
     - Verify successful retry with preserved inputs
     - _Requirements: 13.1, 13.2, 13.3, 13.4, 13.5_
   
-  - [ ] 14.4 Write integration test for permission handling
+  - [x] 14.4 Write integration test for permission handling
     - Test flow: launch → take photo (no permission) → grant permission → take photo → success
     - Verify permission request and handling
     - Test both camera and photo library permissions
     - _Requirements: 11.1, 11.2, 12.1, 12.2_
   
-  - [ ] 14.5 Write integration test for refresh workflow
+  - [x] 14.5 Write integration test for refresh workflow
     - Test flow: generate portrait → view results → refresh → view new variation
     - Verify same inputs used for refresh
     - Verify portrait updates correctly
