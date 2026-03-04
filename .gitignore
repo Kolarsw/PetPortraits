@@ -99,6 +99,7 @@ Secrets.plist
 .env
 .env.local
 .env.*.local
+GoogleService-Info.plist
 
 # Xcode Patch
 *.xcodeproj/*

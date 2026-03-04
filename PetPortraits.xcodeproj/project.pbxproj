@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B04FB582F57F2D500FD1CC0 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = 7B04FB572F57F2D500FD1CC0 /* FirebaseAI */; };
+		7B04FB5A2F57F2D500FD1CC0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7B04FB592F57F2D500FD1CC0 /* FirebaseAnalytics */; };
 		7B582D872F514A8300167D20 /* HomeViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B582D852F514A8300167D20 /* HomeViewUITests.swift */; };
 		7B582D892F514DEC00167D20 /* CaptureViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B582D882F514DEC00167D20 /* CaptureViewUITests.swift */; };
 		7B582D8A2F515A0000167D20 /* ResultsViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B582D8B2F515A0000167D20 /* ResultsViewUITests.swift */; };
@@ -71,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B04FB5A2F57F2D500FD1CC0 /* FirebaseAnalytics in Frameworks */,
+				7B04FB582F57F2D500FD1CC0 /* FirebaseAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +155,8 @@
 			);
 			name = PetPortraits;
 			packageProductDependencies = (
+				7B04FB572F57F2D500FD1CC0 /* FirebaseAI */,
+				7B04FB592F57F2D500FD1CC0 /* FirebaseAnalytics */,
 			);
 			productName = PetPortraits;
 			productReference = 7BBE44842F4EB560002812F6 /* PetPortraits.app */;
@@ -234,6 +240,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				7BAADD292F515ED30046D72D /* XCRemoteSwiftPackageReference "SwiftCheck" */,
+				7B04FB562F57F2D500FD1CC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7BBE44852F4EB560002812F6 /* Products */;
@@ -615,6 +622,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7B04FB562F57F2D500FD1CC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.10.0;
+			};
+		};
 		7BAADD292F515ED30046D72D /* XCRemoteSwiftPackageReference "SwiftCheck" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/typelift/SwiftCheck.git";
@@ -626,6 +641,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7B04FB572F57F2D500FD1CC0 /* FirebaseAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B04FB562F57F2D500FD1CC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAI;
+		};
+		7B04FB592F57F2D500FD1CC0 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B04FB562F57F2D500FD1CC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
 		7BAADD2B2F515FB30046D72D /* SwiftCheck */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7BAADD292F515ED30046D72D /* XCRemoteSwiftPackageReference "SwiftCheck" */;

@@ -435,39 +435,38 @@ The implementation follows an incremental approach: starting with project setup 
     - _Requirements: 8.1, 8.2_
 
 - [ ] 15. Wire all components together in App entry point
-  - [ ] 15.1 Create PetPortraitApp struct with @main attribute
-    - Set up SwiftUI App lifecycle
+  - [ ] 15.1 Update PetPortraitApp with Firebase initialization
+    - Import FirebaseCore and call FirebaseApp.configure() in init()
     - Initialize PortraitViewModel with service dependencies
-    - Create APIService with API key loaded securely from Secrets.plist
-    - Create ImageService and PermissionService instances
-    - Set HomeView as root view with ViewModel injected
+    - Create APIService (using FirebaseAI), ImageService, and PermissionService instances
+    - Set HomeView as root view with ViewModel injected via @StateObject
     - _Requirements: All requirements (application entry point)_
-  
-  - [ ] 15.2 Implement secure API key management
-    - Create `Secrets.plist` file for storing API key (NOT committed to git)
-    - Add `Secrets.plist` to `.gitignore` to prevent accidental commits
-    - Create `Secrets.plist.example` template file (committed to git) showing required keys without values
-    - Implement `SecretsManager` class to securely load API key from plist at runtime
-    - Add runtime validation to fail gracefully if API key is missing or invalid
-    - _Requirements: Security best practices_
     
     ⚠️ **USER ACTION REQUIRED**: Before this task can be completed, you must:
-    1. Go to [Google AI Studio](https://ai.google.dev/) and sign in
-    2. Create an API key for Gemini/Nano Banana Pro
-    3. After Kiro creates `Secrets.plist.example`, copy it to `Secrets.plist`
-    4. Add your API key to `Secrets.plist` (this file stays local, never pushed to GitHub)
+    1. Download `GoogleService-Info.plist` from Firebase Console
+    2. Drag it into the PetPortraits folder in Xcode (ensure "Copy items if needed" is checked)
+    3. Add it to the PetPortraits target
   
-  - [ ] 15.3 Configure Gemini/Nano Banana Pro API integration
-    - Update `APIService.swift` baseURL to use Gemini API endpoint
-    - Update request format to match Gemini image generation API spec
-    - Configure proper Content-Type and Authorization headers
-    - Test API connectivity with a simple request
+  - [ ] 15.2 Implement secure configuration management
+    - Create `SecretsManager.swift` for any non-Firebase sensitive keys (future use)
+    - Create `Secrets.plist.example` template file (committed to git)
+    - Note: Primary API authentication handled by GoogleService-Info.plist (Firebase)
+    - Add GoogleService-Info.plist to .gitignore to prevent accidental commits
+    - _Requirements: Security best practices_
+  
+  - [ ] 15.3 Update APIService for FirebaseAI integration
+    - Import FirebaseAI and remove manual URLRequest code
+    - Initialize model using `FirebaseAI.firebaseAI().generativeModel(modelName: "gemini-2.0-flash-preview-image-generation")`
+    - Implement generatePortrait() using FirebaseAI's GenerateContentResponse types
+    - Send pet photo and style prompt to the model
+    - Handle empty responses and safety filter triggers with appropriate errors
+    - Remove unused ErrorResponse struct (SDK handles response parsing)
     - _Requirements: 2.1, 2.2, 2.3_
   
-  - [ ] 15.4 Configure app-level settings
-    - Verify Info.plist has camera and photo library usage descriptions
-    - Set app display name and bundle identifier
-    - Ensure all sensitive data is excluded from version control
+  - [ ] 15.4 Verify app-level settings
+    - ✅ Info.plist already has camera and photo library usage descriptions (verified)
+    - Verify bundle identifier is set correctly (com.kolar.PetPortraits)
+    - Ensure GoogleService-Info.plist is excluded from version control
     - _Requirements: 11.2, 12.2_
 
 - [ ] 16. Final checkpoint - Complete implementation
