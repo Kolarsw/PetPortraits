@@ -92,6 +92,14 @@ iOSInjectionProject/
 # macOS
 .DS_Store
 
+# Secrets and API Keys - NEVER commit these
+Secrets.plist
+*.secrets
+*.apikey
+.env
+.env.local
+.env.*.local
+
 # Xcode Patch
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj

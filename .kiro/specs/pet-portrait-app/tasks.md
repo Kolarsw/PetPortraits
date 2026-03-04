@@ -438,24 +438,37 @@ The implementation follows an incremental approach: starting with project setup 
   - [ ] 15.1 Create PetPortraitApp struct with @main attribute
     - Set up SwiftUI App lifecycle
     - Initialize PortraitViewModel with service dependencies
-    - Create APIService with API key from configuration
+    - Create APIService with API key loaded securely from Secrets.plist
     - Create ImageService and PermissionService instances
     - Set HomeView as root view with ViewModel injected
     - _Requirements: All requirements (application entry point)_
   
-  - [ ] 15.2 Configure app-level settings
-    - Set up Info.plist usage descriptions for camera and photo library
-    - Configure API key storage (use environment variable or config file)
-    - Set app display name and bundle identifier
-    - _Requirements: 11.2, 12.2_
+  - [ ] 15.2 Implement secure API key management
+    - Create `Secrets.plist` file for storing API key (NOT committed to git)
+    - Add `Secrets.plist` to `.gitignore` to prevent accidental commits
+    - Create `Secrets.plist.example` template file (committed to git) showing required keys without values
+    - Implement `SecretsManager` class to securely load API key from plist at runtime
+    - Add runtime validation to fail gracefully if API key is missing or invalid
+    - _Requirements: Security best practices_
     
     ⚠️ **USER ACTION REQUIRED**: Before this task can be completed, you must:
-    1. Choose an AI image generation API service (e.g., OpenAI DALL-E, Stability AI, Replicate)
-    2. Create an account and obtain your API key from the chosen service
-    3. Update the `baseURL` in `APIService.swift` to match your chosen API's endpoint
-    4. Provide your API key - Kiro will help you configure secure storage
-    
-    _Note: The current implementation uses a placeholder "Nano Banana Pro" API. The actual API endpoint and request format may need adjustment based on your chosen service._
+    1. Go to [Google AI Studio](https://ai.google.dev/) and sign in
+    2. Create an API key for Gemini/Nano Banana Pro
+    3. After Kiro creates `Secrets.plist.example`, copy it to `Secrets.plist`
+    4. Add your API key to `Secrets.plist` (this file stays local, never pushed to GitHub)
+  
+  - [ ] 15.3 Configure Gemini/Nano Banana Pro API integration
+    - Update `APIService.swift` baseURL to use Gemini API endpoint
+    - Update request format to match Gemini image generation API spec
+    - Configure proper Content-Type and Authorization headers
+    - Test API connectivity with a simple request
+    - _Requirements: 2.1, 2.2, 2.3_
+  
+  - [ ] 15.4 Configure app-level settings
+    - Verify Info.plist has camera and photo library usage descriptions
+    - Set app display name and bundle identifier
+    - Ensure all sensitive data is excluded from version control
+    - _Requirements: 11.2, 12.2_
 
 - [ ] 16. Final checkpoint - Complete implementation
   - [ ] 16.1 Run comprehensive test suite
